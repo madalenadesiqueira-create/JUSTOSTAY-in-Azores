@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Airbnb Profissional</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Mini Airbnb</h1>
+</header>
+
+<section class="filtros">
+    <input type="number" id="preco" placeholder="Preço máximo (R$)">
+    <select id="tipo">
+        <option value="todas">Todas</option>
+        <option value="praia">Praia</option>
+        <option value="montanha">Montanha</option>
+        <option value="urbana">Urbana</option>
+        <option value="lago">Lago</option>
+        <option value="villa">Villa</option>
+        <option value="campo">Campo</option>
+    </select>
+    <button onclick="aplicarFiltros()">Filtrar</button>
+</section>
+
+<main id="casas-container"></main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <div id="modal-corpo"></div>
+    </div>
+</div>
+
+<footer>
+    <p>Mini Airbnb &copy; 2025</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

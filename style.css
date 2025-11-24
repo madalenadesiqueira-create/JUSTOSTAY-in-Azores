@@ -1,0 +1,182 @@
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#f7f7f7;
+    color:#333;
+}
+
+/* Header e Footer */
+header, footer {
+    background-color:#ff5a5f;
+    color:white;
+    text-align:center;
+    padding:1.5em 0;
+    font-size:2em;
+    font-weight:bold;
+}
+
+/* Filtros */
+.filtros {
+    text-align:center;
+    margin:1.5em 0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1em;
+}
+
+.filtros input, .filtros select {
+    padding:0.5em;
+    border-radius:5px;
+    border:1px solid #ccc;
+    width:150px;
+}
+
+.filtros button {
+    padding:0.6em 1.2em;
+    border:none;
+    border-radius:5px;
+    background-color:#ff5a5f;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+
+.filtros button:hover { background-color:#e04e52; }
+
+/* Cartões */
+main {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5em;
+    padding:2em;
+}
+
+.casa-card {
+    background-color:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:transform 0.3s, box-shadow 0.3s;
+    cursor:pointer;
+}
+
+.casa-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.casa-card img {
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.casa-card h2 {
+    margin:0.5em 1em;
+    font-size:1.2em;
+    color:#ff5a5f;
+}
+
+.casa-card p {
+    padding:0 1em;
+    font-size:0.95em;
+    margin-bottom:0.5em;
+}
+
+/* Modal */
+.modal {
+    display:none;
+    position:fixed;
+    z-index:100;
+    left:0; top:0;
+    width:100%; height:100%;
+    overflow:auto;
+    background-color:rgba(0,0,0,0.6);
+    transition:opacity 0.3s;
+}
+
+.modal-content {
+    background-color:white;
+    margin:5% auto;
+    padding:2em;
+    border-radius:12px;
+    max-width:800px;
+    position:relative;
+    animation:slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity:0;}
+    to {transform: translateY(0); opacity:1;}
+}
+
+.close {
+    position:absolute;
+    top:10px; right:20px;
+    font-size:2em;
+    font-weight:bold;
+    color:#ff5a5f;
+    cursor:pointer;
+}
+
+.close:hover { color:#e04e52; }
+
+/* Galeria no modal */
+.galeria {
+    text-align:center;
+}
+
+#foto-principal {
+    width:80%;
+    max-width:600px;
+    border-radius:12px;
+    margin-bottom:0.5em;
+}
+
+.miniaturas {
+    display:flex;
+    justify-content:center;
+    gap:0.5em;
+    margin-top:0.5em;
+}
+
+.miniatura {
+    width:80px; height:60px;
+    object-fit:cover;
+    border:2px solid transparent;
+    border-radius:8px;
+    cursor:pointer;
+    transition:border 0.2s;
+}
+
+.miniatura:hover { border:2px solid #ff5a5f; }
+
+/* Calendário e botão reserva */
+.reserva {
+    margin-top:1em;
+    text-align:center;
+}
+
+.reserva input {
+    padding:0.5em;
+    margin:0.2em;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.reserva button {
+    padding:0.6em 1.2em;
+    border:none;
+    border-radius:5px;
+    background-color:#ff5a5f;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+
+.reserva button:hover { background-color:#e04e52; }
